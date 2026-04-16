@@ -1,0 +1,1 @@
+1. npm install class-validator class-transformer --> this is alternative of express-validator(joi) in express js

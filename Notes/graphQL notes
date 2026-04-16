@@ -1,0 +1,13 @@
+GraphQL
+@ObjectType() --> tells GraphQL that this is a returnable model
+@Field() --> Defaults to String
+@InputType() --> marks this class as an input for Mutations
+@Query() --> Queries fetch data
+@Mutation() --> Mutations change data
+
+In REST, you use Controllers to handle HTTP methods (GET, POST). In GraphQL, you use Resolvers to handle Queries (reading data) and Mutations (modifying data).
+
+
+pakages:
+1. npm install @nestjs/graphql @nestjs/apollo @apollo/server graphql
+2. npm install @as-integrations/express5

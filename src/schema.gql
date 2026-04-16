@@ -1,0 +1,27 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Genre {
+  id: Int!
+  name: String!
+}
+
+type Query {
+  genres: [Genre!]!
+  genre(id: Int!): Genre!
+}
+
+type Mutation {
+  createGenre(createGenreInput: CreateGenreDto!): [Genre!]!
+  updateGenre(id: Int!, updateGenreInput: UpdateGenreDto!): Genre!
+  removeGenre(id: Int!): Genre!
+}
+
+input CreateGenreDto {
+  name: String!
+}
+
+input UpdateGenreDto {
+  name: String
+}

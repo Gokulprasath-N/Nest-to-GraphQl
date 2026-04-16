@@ -1,0 +1,65 @@
+how to install nest js and create a project
+ step 1 --> npm i -g @nestjs/cli
+ step 2 --> npx @nestjs/cli new my-project
+ step 3 --> cd my-project
+ step 4 --> npm run start --> it will run without restart, npm run start:dev --> we made any changes it automatically restart
+ step 5 --> http://localhost:3000/
+
+
+project tree --> (To learn First)
+  my-nest-app/
+├── node_modules/       # Downloaded packages (Ignore)
+├── test/               # Advanced end-to-end testing (Ignore for now)
+├── package.json        # Your npm scripts and dependencies
+├── tsconfig.json       # TypeScript strictness rules (Ignore)
+│
+└── src/                # 🚨 YOU WORK HERE 99% OF THE TIME 🚨
+    ├── main.ts
+    ├── app.module.ts
+    ├── app.controller.ts
+    ├── app.service.ts
+    └── app.controller.spec.ts  # Testing file (Ignore for now)
++
++
++---
++🚨 KEY TERMS 🚨
++
++1. NestFactory: The "Construction Crew" - A built-in class used to create your application instance.
++2. AppModule:   The "Blueprint" - The root module that tells Nest where to find everything.
++3. bootstrap:   The "Engine Start" - An async function that boots up the whole framework.
+
+
+
+@ annoation definition 
+
+What is a Decorator?
+A decorator is a way to attach metadata (extra information) to a class, method, or parameter — so that NestJS can read it and know what to do automatically.
+Think of it like a label on a package:
+The package = your class/method
+The label (@Controller) = tells NestJS what this package IS and how to handle it
+
+@ Annotation Definition
+
+@Controller('api/genres')  --> Labels a class. Registers it as a route handler for /api/genres.
+
+@Get()                     --> Labels a method. Maps GET request to that function.
+@Post()                    --> Labels a method. Maps POST request to that function.
+@Patch()                   --> Labels a method. Maps PATCH request to that function.
+@Delete()                  --> Labels a method. Maps DELETE request to that function.
+
+@Body()                    --> Labels a parameter. Extracts req.body and passes it.
+@Param('id')               --> Labels a parameter. Extracts req.params.id and passes it.
+
+@Injectable()              --> Labels a class (service). Marks it available for Dependency Injection.
+@Module({...})             --> Labels a class. Registers controllers & services for that module.
+
+
+
+put vs patch 
+
+PUT — Replace the entire resource
+You must send all fields, even the ones you're not changing
+PATCH — Update only what you send
+You send only the fields you want to chang
+
+
