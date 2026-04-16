@@ -1,0 +1,47 @@
+get --> query
+  # Write your query or mutation here
+query {
+  genres {
+    id
+    name
+  }
+}
+
+get by id --> query
+  # Write your query or mutation here
+query {
+  genre(id: "1") {
+    id
+    name
+  }
+}
+
+post --> mutation
+  # Write your query or mutation here
+mutation {
+  createGenre(name: "Horror") {
+    id
+    name
+  }
+}
+
+
+put --> mutation
+  # Write your query or mutation here
+mutation {
+  updateGenre(id: "1", name: "Horror") {
+    id
+    name
+  }
+}
+
+
+delete --> mutation
+  # Write your query or mutation here
+mutation {
+  deleteGenre(id: "1") {
+    id
+    name
+  }
+}
+
